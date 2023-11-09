@@ -9,15 +9,14 @@
 
 int main(int ac, char **av)
 {
-
-
-	char *input;
+	char *input, token_array;
 
 	while (1)
 	{
-		prompt();
+		prompt(":)> ");
 		input = read_input();
-
+		token_array = tokenize_input(input, " \n\t");
+		//execute_cmd(token_array);
 		printf("%s", input);
 		//execve("/bin/ls", av, NULL);
 	}

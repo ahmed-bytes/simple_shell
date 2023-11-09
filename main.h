@@ -7,9 +7,11 @@
 #include <unistd.h>
 #include <sys/wait.h>
 #include <sys/types.h>
+#include <string.h>
 
 /* function prototypes */
-void prompt(void);
+void prompt(char *str);
 char *read_input(void);
+char *tokenize_input(char *input, char *delim);
 
 #endif /* MAIN_H */
