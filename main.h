@@ -9,4 +9,7 @@
 #include <sys/types.h>
 
 /* function prototypes */
-#endif
+void prompt(void);
+char *read_input(void);
+
+#endif /* MAIN_H */
