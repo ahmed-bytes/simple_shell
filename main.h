@@ -12,6 +12,6 @@
 /* function prototypes */
 void prompt(char *str);
 char *read_input(void);
-char *tokenize_input(char *input, char *delim);
+char **tokenize_input(char *input, char *delim);
 
 #endif /* MAIN_H */
