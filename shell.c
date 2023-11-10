@@ -7,18 +7,25 @@
 * Return: 0(Success)
 */
 
-int main(int ac, char **av)
+int main(void)
 {
-	char *input, token_array;
+	char *input, **token_array;
+	int i = 0;
 
 	while (1)
 	{
 		prompt(":)> ");
 		input = read_input();
-		token_array = tokenize_input(input, " \n\t");
-		//execute_cmd(token_array);
-		printf("%s", input);
-		//execve("/bin/ls", av, NULL);
+		token_array = tokenize_input(input, " \n");
+		/*execute_cmd(token_array);*/
+		while(token_array[i] != NULL)
+		{
+			printf("%s\n", token_array[i]);
+			free(token_array[i]);
+			i++;
+		}
+		free(token_array);
+		free(input);
 	}
 
 	return (0);
