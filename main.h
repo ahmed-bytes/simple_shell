@@ -9,9 +9,13 @@
 #include <sys/types.h>
 #include <string.h>
 
-/* function prototypes */
-void prompt(char *str);
+/* Function prototypes */
+void print_string(char *str);
 char *read_input(void);
 char **tokenize_input(char *input, char *delim);
+void execute_cmd(char **token_array);
+
+/* Global environmoent variable */
+extern char **environ;
 
 #endif /* MAIN_H */
