@@ -14,9 +14,8 @@ char *read_input(void)
 	chars_read = getline(&lineptr, &length, stdin);
 	if (chars_read == -1)
 	{
-		perror("getline");
+		print_string("\n");
 		exit(EXIT_FAILURE);
 	}
-
 	return (lineptr);
 }
