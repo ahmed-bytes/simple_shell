@@ -14,13 +14,13 @@ int main(void)
 
 	while (1)
 	{
-		prompt(":)> ");
+		print_string(":)> ");
 		input = read_input();
 		token_array = tokenize_input(input, " \n");
-		/*execute_cmd(token_array);*/
+		execute_cmd(token_array);
 		while(token_array[i] != NULL)
 		{
-			printf("%s\n", token_array[i]);
+			/*printf("%s\n", token_array[i]);*/
 			free(token_array[i]);
 			i++;
 		}
